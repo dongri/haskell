@@ -23,4 +23,4 @@ cabal.project.local~
 
 # custom
 _cache
-_site
+_site/*
