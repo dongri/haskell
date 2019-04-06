@@ -83,5 +83,6 @@ config = defaultConfiguration
                       "&& cp -a _site/. ." `mappend`
                       "&& git add -A" `mappend`
                       "&& git commit -m 'Publish'" `mappend`
+                      "&& git push -f origin gh-pages" `mappend`
                       "&& git checkout master"
     }
