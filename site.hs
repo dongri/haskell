@@ -72,7 +72,10 @@ config :: Configuration
 config = defaultConfiguration
     { deployCommand = "git checkout master" `mappend`
                       "&& stack exec site rebuild" `mappend`
-                      "&& git checkout gh-pages" `mappend`
+                      "&& git add -A" `mappend`
+                      "&& git commit -m 'Edit'" `mappend`
+                      "&& git branch -D gh-pages" `mappend`
+                      "&& git checkout -b gh-pages" `mappend`
                       "&& rsync -a --filter='P _site/'" `mappend`
                       " --filter='P _cache/' --filter='P .git/'" `mappend`
                       " --filter='P .stack-work' --filter='P .gitignore'" `mappend`
