@@ -70,9 +70,9 @@ postCtx =
 --------------------------------------------------------------------------------
 config :: Configuration
 config = defaultConfiguration
-    { deployCommand = "git checkout gh-pages" `mappend`
-                      "&& git merge master" `mappend`
+    { deployCommand = "git checkout master" `mappend`
                       "&& stack exec site rebuild" `mappend`
+                      "&& git checkout gh-pages" `mappend`
                       "&& rsync -a --filter='P _site/'" `mappend`
                       " --filter='P _cache/' --filter='P .git/'" `mappend`
                       " --filter='P .stack-work' --filter='P .gitignore'" `mappend`
@@ -80,6 +80,5 @@ config = defaultConfiguration
                       "&& cp -a _site/. ." `mappend`
                       "&& git add -A" `mappend`
                       "&& git commit -m 'Publish'" `mappend`
-                      "&& git push origin gh-pages" `mappend`
                       "&& git checkout master"
     }
