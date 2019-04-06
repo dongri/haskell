@@ -32,8 +32,9 @@ main = hakyllWith config $ do
         route idRoute
         compile $ do
             posts <- recentFirst =<< loadAll "posts/*"
+            let newPosts = reverse posts
             let archiveCtx =
-                    listField "posts" postCtx (return posts) `mappend`
+                    listField "posts" postCtx (return newPosts) `mappend`
                     constField "title" "Archives"            `mappend`
                     defaultContext
 
@@ -47,8 +48,9 @@ main = hakyllWith config $ do
         route idRoute
         compile $ do
             posts <- recentFirst =<< loadAll "posts/*"
+            let newPosts = reverse posts
             let indexCtx =
-                    listField "posts" postCtx (return posts) `mappend`
+                    listField "posts" postCtx (return newPosts) `mappend`
                     constField "title" "Home"                `mappend`
                     defaultContext
 
