@@ -74,6 +74,7 @@ config = defaultConfiguration
                       "&& stack exec site rebuild" `mappend`
                       "&& git add -A" `mappend`
                       "&& git commit -m 'Edit'" `mappend`
+                      "&& git push -f origin master" `mappend`
                       "&& git branch -D gh-pages" `mappend`
                       "&& git checkout -b gh-pages" `mappend`
                       "&& rsync -a --filter='P _site/'" `mappend`
