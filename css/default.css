@@ -48,6 +48,13 @@ article .header {
   text-decoration: none;
 }
 
+pre > code {
+  background: black;
+  color: lightgreen;
+  padding: 10px;
+  border-radius: 5px;
+}
+
 @media (max-width: 319px) {
   body {
     width: 90%;
