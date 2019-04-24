@@ -48,7 +48,7 @@ article .header {
   text-decoration: none;
 }
 
-pre.code {
+pre {
   border: 1px solid #ddd;
   background: #eee;
   color: #333;
