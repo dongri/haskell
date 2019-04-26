@@ -48,6 +48,10 @@ article .header {
   text-decoration: none;
 }
 
+li {
+  margin-bottom: 5px;
+}
+
 pre {
   border: 1px solid #ddd;
   background: #eee;
