@@ -3,7 +3,7 @@ title:  Let's Encrypt
 author: D
 ---
 
-
+### Server
 ```
 ./certbot-auto certonly --manual \
 -d *.lgtm.lol \
@@ -15,6 +15,7 @@ author: D
 --server https://acme-v02.api.letsencrypt.org/directory
 ```
 
+### Local
 ```
 dig _acme-challenge.lgtm.lol any @8.8.8.8
 ```
