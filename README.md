@@ -6,9 +6,9 @@
 
 # Init
 ```
-$ hakyll-init haskell
+$ hakyll-init hazy
 
-$ cd haskell
+$ cd hazy
 $ stack init
 $ stack build
 $ stack exec site build
